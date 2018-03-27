@@ -1,0 +1,9 @@
+<h1>Country#all_states</h1>
+<p>Find me in app/views/country/all_states.html.erb</p>
+
+<% @states.each do |state| %>
+  <p><%= state.name %> is the state name.</p>
+  <p><%= state.capital %> is the state capital...</p>
+  <p><%= state.population %> people live here...</p>
+  <p><%= state.area %> is the area in square miles...</p>
+<% end %>

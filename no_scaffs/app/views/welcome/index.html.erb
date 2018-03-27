@@ -1,0 +1,25 @@
+<h1>Home Page</h1>
+
+<div style="margin:50px;">
+  <h3>Create a User</h3>
+  <!-- Write comments here about what a from_tag is -->
+  <%= form_tag create_users_path do %>
+    <%= text_field_tag :name, nil, placeholder: "Your Name" %><br />
+    <%= number_field_tag :age, nil, placeholder: "Your Age" %><br />
+    <%= submit_tag "Create Profile" %>
+   <% end %>
+
+</div>
+
+
+<div style="margin:50px;">
+  <h3>Create a Product</h3>
+
+  <%= form_for @product do |f| %>
+    <%= f.text_field :name, placeholder: "Product Name" %> <br>
+    <%= f.number_field :price, placeholder: "Price", step: :any %> <br>
+    <%= f.number_field :quantity, placeholder: "Quantity" %> <br>
+    <%= f.submit "Submit Product" %>
+  <% end %>
+
+</div>
